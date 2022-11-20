@@ -1,23 +1,31 @@
-export const Header = () => {
-    const element = document.createElement('header')
+import { Firebase } from '../firebase.js'
+import { getAuth, signOut } from "firebase/auth"
+
+const auth = getAuth()
+
+export const Header = (props) => {
+    const { nameDay } = props
 
     // Today's date
     const date = new Date(),
     dateFormatted = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear()
 
-    // Today's name day
-    fetch('https://svatky.adresa.info/json')
-        .then((response) => response.json())
-        .then((data) => element.innerHTML = `
-                <div class="today">
-                <a href="/login">Login</a>
-                    <h1 class="hi">Hi Vendy!</h1>
-                    <p class="date">It is ${dateFormatted}</p>
-                    <p class="nameDay">${data[0].name} has a name-day</p>
-                    <input type="search" name="" id="" placeholder="Search.." />
-                </div>
-            `
-        )
+    const element = document.createElement('header')
+    element.innerHTML = `
+        <div class="today">
+        <a href="/login">Logout</a>
+            <h1 class="hi">Hello!</h1>
+            <p class="date">It is ${dateFormatted}</p>
+            <p class="nameDay">${nameDay} has a name-day</p>
+            <input type="search" name="" id="" placeholder="Search.." />
+        ` 
+
+    element.querySelector('a').addEventListener('click', () => {
+        signOut(auth)
+            .then(() => { 
+                window.location.pathname = '/login'
+            })
+    })
 
     return element
 }

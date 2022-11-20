@@ -1,6 +1,7 @@
 header {
     background: linear-gradient(190deg, rgba(5,11,17,1) 0%, rgba(22,73,103,1) 100%);
     color: white;
+    margin-bottom: -2rem;
 
     a {
         position: absolute;
@@ -9,8 +10,7 @@ header {
         font-size: 1rem;
         line-height: 1rem;
         padding: 2rem;
-        color: white;
-        text-decoration: none;
+        color: rgb(151, 151, 151);
     }
 
     .today {
