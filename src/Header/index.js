@@ -9,12 +9,8 @@ export const Header = () => {
     fetch('https://svatky.adresa.info/json')
         .then((response) => response.json())
         .then((data) => element.innerHTML = `
-                <nav>
-                    <a href="/register">Register</a>
-                    <a href="/login">Login</a>
-                </nav>
-
                 <div class="today">
+                <a href="/login">Login</a>
                     <h1 class="hi">Hi Vendy!</h1>
                     <p class="date">It is ${dateFormatted}</p>
                     <p class="nameDay">${data[0].name} has a name-day</p>
