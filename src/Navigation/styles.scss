@@ -1,0 +1,12 @@
+.nav-bottom {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(163, 163, 163);
+
+    a {
+        display: inline-block;
+        padding: 1rem 2rem;
+    }
+}
