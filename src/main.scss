@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
 @import './Header/styles.scss';
 @import './Navigation/styles.scss';
+@import './Login/styles.scss';
 
 * {
     margin: 0;
@@ -12,12 +13,69 @@
 h1 {
     font-size: 1.5rem;
     line-height: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 main {
     height: 100vh;
-    padding: 1rem 2rem;
+    padding: 2rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     background-color: white;
+}
+
+// Buttons
+button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 2rem;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+
+    &.primary {
+        background: linear-gradient(90deg, rgba(107,195,87,1) 25%, rgba(168,210,98,1) 100%);
+        color: white;
+    }
+
+    &.secondary {
+        border: 2px solid #6bc357;
+        color: #53b13d;
+    }
+
+    &.delete {
+        border: 2px solid #969696;
+        color: #7e7e7e
+    }
+
+    &.add {
+        padding: 0;
+        min-height: 60px; 
+        min-width: 60px;  
+        font-size: 2em;
+        line-height: 60px; 
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        margin-top: -1.5rem;
+    }
+}
+
+// Inputs
+input {
+    all: unset;
+    background-color: rgba(white, .1);
+    border: 1px solid gray;
+    height: 2.5rem;
+    width: 80%;      
+    border-radius: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+// Checkobxes
+input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
 }

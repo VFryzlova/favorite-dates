@@ -3,5 +3,6 @@ export const Home = () => {
     element.innerHTML = `
         <h1>Home</h1>
     `
+
     return element
 }

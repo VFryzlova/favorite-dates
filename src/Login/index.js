@@ -5,15 +5,19 @@ const auth = getAuth()
 
 export const Login = () => {
     const element = document.createElement('main')
+    element.classList.add('login')
     element.innerHTML = `
         <h1>Login</h1>
         <form>
-            <label for="name">Your name</label>
-            <input type="text" name="name" />
-            <label for="email">Email</label>
-            <input type="email" name="email" />
-            <label for="password">Password</label>
-            <input type="password" name="password" />
+            <label>
+                Your name <input type="text" name="name" />
+            </label>
+            <label>
+                Email <input type="email" name="email" />
+            </label>
+            <label>
+                Password <input type="password" name="password" />
+            </label>
             <button class="primary">Log in</button>
         </form>
     `
